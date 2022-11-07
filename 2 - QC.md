@@ -5,11 +5,11 @@ sinteractive -c 28 -t 00:15:00 -J QC -A PAS2303
 ```
 ## Go to directory QC:
 ```shell
-/fs/ess/scratch/PAS2303/Jonathan/Microbiomes/QC
+/fs/ess/scratch/PAS2303/Your_OSC_ID/Microbiomes/QC
 mkdir FastQC_reports MultiQC_reports
 
 # extracting fastq files from Raw_Data
-find /fs/ess/scratch/PAS2303/Jonathan/Microbiomes/Raw_Data/reads_fastq/ -name "*fastq.gz" -exec cp {} . \;
+find /fs/ess/scratch/PAS2303/Your_OSC_ID/Microbiomes/Raw_Data/reads_fastq/ -name "*fastq.gz" -exec cp {} . \;
 ls *fastq.gz
 ```
 

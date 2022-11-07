@@ -1,7 +1,7 @@
 ## Preparing basic directory structure
 Directories:
 ```shell
-cd /fs/ess/scratch/PAS2303/Jonathan
+cd /fs/ess/scratch/PAS2303/Your_OSC_ID
 mkdir Microbiomes
 cd Microbiomes
 mkdir Raw_Data Software QC Bacterial Fungal
@@ -46,7 +46,7 @@ qiime qiime itsxpress
 
 ## Get the data from ENA-SRA, try this first, if it sodes not work for you go to the option of copying the files form another directory
 ```shell
-cd /fs/ess/scratch/PAS2303/Jonathan/Microbiome/Raw_Data
+cd /fs/ess/scratch/PAS2303/Your_OSC_ID/Microbiome/Raw_Data
 
 # Download the data from ENA for BioProject PRJEB45622
 wget 'https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJEB45622&result=read_run&fields=secondary_sample_accession,study_accession,fastq_md5,fastq_ftp,sample_alias,sample_title&format=tsv&download=true&limit=0' -O - | tee ENA_Run_Info.tsv

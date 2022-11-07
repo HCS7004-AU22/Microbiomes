@@ -7,7 +7,7 @@ sinteractive -c 28 -t 01:00:00 -J Fungal -A PAS2303
 ```
 ## Go to directory Fungal:
 ```shell
-cd /fs/ess/scratch/PAS2303/Jonathan/Microbiomes/Fungal
+cd /fs/ess/scratch/PAS2303/Your_OSC_ID/Microbiomes/Fungal
 ```
 ## Then let's start by trimming the data
 ```shell
@@ -22,7 +22,7 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-pa
 qiime demux summarize --i-data Fungal.qza --o-visualization Fungal_vis.qzv
 mkdir Trimming
 # Trimming (this process takes around 1.5 hours, you will need to submit a batch job with the following instructions:)
-cd /fs/ess/scratch/PAS2303/Jonathan/Microbiomes/Fungal
+cd /fs/ess/scratch/PAS2303/Your_OSC_ID/Microbiomes/Fungal
 module load miniconda3/4.12.0-py39
 source activate qiime2-2022.8
 qiime itsxpress trim-pair-output-unmerged --i-per-sample-sequences Fungal.qza --p-region ITS2 --p-taxa F --p-threads 28 --o-trimmed Trimming/trimmed.qza
@@ -53,7 +53,7 @@ qiime tools import --type 'FeatureData[Taxonomy]' --input-format HeaderlessTSVTa
 ## Train Qiime for the classification
 ```shell
 # This process takes around 1.5 hours, you will need to submit a batch job with the following instructions:
-cd /fs/ess/scratch/PAS2303/Jonathan/Microbiomes/Fungal
+cd /fs/ess/scratch/PAS2303/Your_OSC_ID/Microbiomes/Fungal
 module load miniconda3/4.12.0-py39
 source activate qiime2-2022.8
 qiime feature-classifier fit-classifier-naive-bayes --i-reference-reads Classifiers/UNITE.qza --i-reference-taxonomy Classifiers/UNITE_taxonomy.qza --o-classifier Classifiers/Classifier.qza
